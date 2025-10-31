@@ -1,21 +1,38 @@
-# zshMusic
-A cli tool to use apple music through your command line on MacOS. Feel free to make a branch and make any kind of modifications and make a PR to it, tbh I'll most likely merge it, or don't. This will remain unlicensed so do whatever you want with it.
+# zsh-music-plugin
 
-## How to install
+Command-line interface for Apple Music on macOS. Oh My Zsh plugin for basic music controls.
 
-Download or clone down the repo & add this line to your .zshrc file
+## Installation
+
+Clone the repository to your Oh My Zsh custom plugins directory:
+
 ```bash
-source ~/add-to-your-.zshrc/zshMusic/zshmusic.zsh
+git clone https://github.com/your-username/zsh-music-plugin.git $ZSH_CUSTOM/plugins/zsh-music-plugin
 ```
 
-## How to use
+Add `zsh-music-plugin` to your plugins list in `~/.zshrc`:
 
-| COMMAND  | CMD | DESCRIPTION                | USAGE                |
-|----------|-----|----------------------------|----------------------|
-| -open    | -o  | Launches Music             | `music -o`           |
-| -vol     | -v  | Changes volume             | `music -v 10`        |
-| -artist  | -a  | Plays artist from library  | `music -a metallica` |
-| -stop    | -s  | Pauses Music               | `music -s`           |
-| -play    | -p  | Plays Music                | `music -p`           |
-| -next    | -n  | Skips song                 | `music -n`           |
-| -current | -c  | Shows current track        | `music -c`           |
+```bash
+plugins=(... zsh-music-plugin)
+```
+
+Reload your shell:
+
+```bash
+source ~/.zshrc
+```
+
+## Usage
+
+| Command  | Short | Description        | Example                    |
+| -------- | ----- | ------------------ | -------------------------- |
+| -open    | -o    | Launch Apple Music | `music -o`                 |
+| -vol     | -v    | Set volume (0-100) | `music -v 50`              |
+| -stop    | -s    | Pause playback     | `music -s`                 |
+| -play    | -p    | Resume playback    | `music -p`                 |
+| -next    | -n    | Skip to next track | `music -n`                 |
+| -current | -c    | Show current track | `music -c`                 |
+| -query   | -q    | Search Apple Music | `music -q "big subwoofer"` |
+| -help    | -h    | Show help          | `music -h`                 |
+
+Run `music` with no arguments to display help.
