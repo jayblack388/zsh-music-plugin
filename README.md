@@ -7,7 +7,7 @@ Command-line interface for Apple Music on macOS. Oh My Zsh plugin for basic musi
 Clone the repository to your Oh My Zsh custom plugins directory:
 
 ```bash
-git clone https://github.com/your-username/zsh-music-plugin.git $ZSH_CUSTOM/plugins/zsh-music-plugin
+git clone git@github.com:jayblack388/zsh-music-plugin.git $ZSH_CUSTOM/plugins/zsh-music-plugin
 ```
 
 Add `zsh-music-plugin` to your plugins list in `~/.zshrc`:
